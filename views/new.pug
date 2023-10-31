@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1=title
+    form(action="/new" method="post")
+        label(for="name") Name:
+        input(type="text" name="name" id="name")
+
+        label(for="message") Message:
+        input(type="text" name="message" id="messagee")
+
+        button(type="submit") Submit
+    
+    a(href="/")
+        button="Return"
