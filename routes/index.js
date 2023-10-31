@@ -22,7 +22,12 @@ router.get('/', function(req, res, next) {
 router.post('/new', function(req, res) {
   const name = req.body.name
   const message = req.body.message
-  console.log('Name: ' + name + ', Message: ' + message)
+  messages.push({ 
+    text: message,
+    user: name,
+    added: new Date()
+   })
+  console.log(messages)
   res.redirect('/')
 })
 

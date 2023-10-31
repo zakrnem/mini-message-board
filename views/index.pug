@@ -4,9 +4,11 @@ block content
   h1= title
   a(href="/new")
     button= 'Add message'
-  ul
-  each message in messages
-    li
-      p Text: #{message.text}
-      p User: #{message.user}
-      p Added: #{message.added}
+  ul.messages-list
+    each message in messages
+      li
+        span.user #{message.user}
+        span.added (#{message.added})
+        p #{message.text}
+        
+        

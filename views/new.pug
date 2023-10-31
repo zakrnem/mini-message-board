@@ -2,14 +2,15 @@ extends layout
 
 block content
     h1=title
+    a(href="/")
+        button="Return"
     form(action="/new" method="post")
         label(for="name") Name:
         input(type="text" name="name" id="name")
 
         label(for="message") Message:
-        input(type="text" name="message" id="messagee")
+        textarea(name="message", cols="30", rows="10") 
 
         button(type="submit") Submit
     
-    a(href="/")
-        button="Return"
+    
