@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 const Message = require('../db')
+let messages
 
-run()
 async function run () {
   try {
     const msg1 = await Message.findOne({user: "Amando"})
@@ -24,15 +24,22 @@ async function run () {
     } else {
       console.log('Users already exist')
     }
+    messages = await Message.find()
   } catch (error) {
     console.log("Error: ", error.message)
   }
 }
 
-/* GET home page. */
+renderMessages()
+async function renderMessages() {
+  await run()
+  /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Messageboard', messages });
 });
+}
+
+
 
 router.post('/new', function(req, res) {
   const name = req.body.name
