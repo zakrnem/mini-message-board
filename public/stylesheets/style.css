@@ -1,13 +1,17 @@
 :root {
-  --color1: #E8F3D6;
-  --color2: #FCF9BE;
-  --color3: #FFDCA9;
-  --color4: #FAAB78;
+  --color1: #e8f3d6;
+  --color2: #fcf9be;
+  --color3: #ffdca9;
+  --color4: #faab78;
 }
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font:
+    14px "Lucida Grande",
+    Helvetica,
+    Arial,
+    sans-serif;
   background-color: var(--color1);
   display: grid;
   justify-items: center;
@@ -22,16 +26,16 @@ button {
   border-radius: 0.5rem;
 }
 
-button:hover{
+button:hover {
   background-color: var(--color3);
 }
 
-button:active{
+button:active {
   background-color: var(--color2);
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
 ul {
@@ -45,8 +49,8 @@ ul {
 }
 
 .added {
-  margin-left: .5rem;
-  font-size: .7rem;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .messages-list {
@@ -63,5 +67,5 @@ ul {
 
 form {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
